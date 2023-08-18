@@ -1,4 +1,5 @@
 <?
+error_reporting(E_ERROR | E_PARSE);
 require_once 'setting.dev.php';
 if (file_exists("lang/" . $setting["LANG"] . ".php")) {
     require_once "lang/" . $setting["LANG"] . ".php";
