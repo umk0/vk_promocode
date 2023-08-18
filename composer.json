@@ -1,0 +1,7 @@
+{
+    "require": {
+        "xpaw/php-source-query-class": "^1.0",
+        "catfan/medoo": "^1.7",
+        "qiwi/bill-payments-php-sdk": "^0.2.2"
+    }
+}
