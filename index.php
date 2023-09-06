@@ -40,7 +40,7 @@ switch ($payload['command']) {
                         $url_image = $site . "maps/noimage.jpg";
                     }
                 } else { //не доступен
-                    $url_image = $site . "maps/noimage.jpg";
+                    $url_image = $site . "maps/noresponse.jpg";
                 }
                 $vk->SendButton($peer_id, $lang["map"] . " " . $info['Map'], [[["text", ["command" => "start"], $lang["back_btn"], $setting["VK"]["back_btn_color"]]]], true, $url_image);
                 $i = 1;
