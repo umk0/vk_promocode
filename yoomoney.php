@@ -15,7 +15,7 @@ switch ($_GET['type']) {
         if ($peer_id == NULL) {
             exit('Dont access');
         }
-        $order_id = genUniqPromo("orders", "id_order", "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        $order_id = genUniqPromo("orders", "id_order");
         $DB->insert("orders", [
             'id_order' => $order_id,
             'id_service' => $id_service,

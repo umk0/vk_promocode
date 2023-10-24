@@ -27,7 +27,7 @@ function genUniqPromo($base = "promo", $row = 'promocode', $mask = null, $charac
     if ($check == 0) {
         return $promo;
     } else {
-        return genUniqPromo();
+        return genUniqPromo($base, $row, $mask, $characters);
     }
 }
 function num_word($value, $words, $show = true)
@@ -66,7 +66,7 @@ function getYoomoneyUrl($order_id, $successUrl, $sum, $receiver, $mode = 0, $com
             "receiver" => $receiver,
             "label" => $order_id,
             "quickpay-form" => "button",
-            "sum" => ($commission_type == 0) ? ($sum + ($sum * ($mode == 0) ? 0.01012 : 0.03012)) : $sum,// бля плюс минус формула рабочая в случае когда комиссию платит покупатель то продавец получит больше чем должен на сущщие копейки XD
+            "sum" => ($commission_type == 0) ? ($sum + ($sum * ($mode == 0) ? 0.01012 : 0.03012)) : $sum, // бля плюс минус формула рабочая в случае когда комиссию платит покупатель то продавец получит больше чем должен на сущщие копейки XD
             "paymentType" => ($mode == 0) ? "PC" : "AC",
             "successURL" => $successUrl
         ])
